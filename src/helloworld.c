@@ -14,7 +14,7 @@ PyObject* hello_hex(PyObject *self, PyObject *args) {
     if (!PyArg_ParseTuple(args, "")) {
         return NULL;
     }
-    return Py_BuildValue("s#", bin, sizeof(bin));
+    return Py_BuildValue("y#", bin, sizeof(bin));
 }
 
 static PyMethodDef methods[] = {
